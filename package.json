@@ -1,7 +1,7 @@
 {
-  "name": "easy-vue",
+  "name": "Mobile webRTC Client",
   "version": "0.7.2",
-  "description": "Experimental Mobile Client",
+  "description": "Experimental Mobile webRTC Client",
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf dist",
