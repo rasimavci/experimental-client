@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="./src/images/logo-3.png" width="360px">
+    <img src="./src/images/kandylogo.png">
 </p>
 
 <h1 align="center">Mobile webRTC Client</h1>
@@ -8,7 +8,14 @@
 
 ## Experimental Mobile WebRTC Client with Vuejs and vuex
 
-> An easy example to build a client with Vue2
+> An example to build a client with Vue2 and vuex using kandy.js
+
+## Introduction
+In this applicaton I tried to build a minimal webRTC client for mobile using kandy.js
+
+After all, I learned Vue for a while, and I tried to be familier more about the Vue ecosystem and after reading some guides in their official site, I just want to try my chance.
+
+So I decided to build this mobile client, please share your comments !
 
 ## Dependence
 
