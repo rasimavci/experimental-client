@@ -1,5 +1,5 @@
 {
-  "name": "Mobile webRTC Client",
+  "name": "experimental-client",
   "version": "0.7.2",
   "description": "Experimental Mobile webRTC Client",
   "main": "index.js",
