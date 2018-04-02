@@ -105,7 +105,23 @@
         <div class="num">#</div>
         </div>
         </div>
-        
+
+           <button class="button" @click="connect()">
+              Login
+            </button>
+           <button class="button" @click="sendMessage()">
+              Send
+            </button>     
+           <button class="button" @click="sendMessage2()">
+              Send2
+            </button>     
+           <button class="button" @click="getPresence()">
+              Presence
+            </button> 
+           <button class="button" @click="presenceSubscribe()">
+              Subs
+            </button>   
+                    
         
     </div>
     

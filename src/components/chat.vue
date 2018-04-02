@@ -55,7 +55,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .easy-list img {
   width: 42px;
 }
@@ -131,6 +131,36 @@ message.me{
   box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
   transition: all .3s ease;
   font-family: Helvetica, Arial, sans-serif;
+}
+
+.messages-container {
+  height: calc(100vh - 50px);
+  overflow-y: scroll;
+}
+
+.messages-container ul {
+  width: 400px;
+}
+
+.bottombar {
+  height: 50px;
+  width: 100vw;
+  margin-left: 80px;
+  background-color: #465A69;
+}
+
+.md-dialog ul {
+  list-style-type: none;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+.md-dialog ul li {
+  padding-bottom: 5px;
+}
+
+.selected-contact {
+  background: lightsteelblue;
 }
 
 /* End message TAG */

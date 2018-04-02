@@ -28,10 +28,13 @@ const state = {
   activeCallOnHold: false,
   currentConv: {},
   activeCallEnded: false,
-  activeCallExist: false
+  activeCallExist: false,
+  isConnected: false
 };
 
-const getters = {};
+const getters = {
+  getMyState: state => state.isConnected
+};
 
 const mutations = {
   updateLoadingState(state, data) {
@@ -162,7 +165,9 @@ const mutations = {
   SET_CALL_START(state, user) {
     state.callstart = true;
   },
-
+  SET_ISCONNECTED(state, isConnected) {
+    state.isConnected = isConnected;
+  },
   UPDATE_CALLS(state, calls) {
     console.log("add call if not exist");
     // state.calls = calls;
@@ -305,7 +310,9 @@ const actions = {
   },
 
   disconnect({ context }) {
-    context.commit(types.DISCONNECT);
+    kandy.disconnect();
+    store.commit("SET_ISCONNECTED", false);
+    // context.commit(types.DISCONNECT);
   },
 
   call(context, callee) {
@@ -500,6 +507,7 @@ function addEventListeners() {
   kandy.on("auth:change", function(data) {
     console.log("auth:change Event Data: " + JSON.stringify(data));
     if (kandy.getConnection().isConnected === true) {
+      store.commit("SET_ISCONNECTED", true);
       //  store.dispatch ('refresh');
       kandy.contacts.refresh();
       //this.refreshContacts ();

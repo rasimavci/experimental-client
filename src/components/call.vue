@@ -89,28 +89,18 @@
             <button class="button" @click="press('#')">
               #
             </button>
-           <button class="button" @click="connect()">
-              Login
-            </button>
-           <button class="button" @click="sendMessage()">
-              Send
-            </button>     
-           <button class="button" @click="sendMessage2()">
-              Send2
-            </button>     
-           <button class="button" @click="getPresence()">
-              Pre1
-            </button> 
-           <button class="button" @click="presenceSubscribe()">
-              Subs
-            </button>                                           
           </div>
         </div>
       </div>
       <div class="keypad-menu">
 
-
-
+           <button class="button" @click="sendMessage()">
+              Send
+            </button>     
+           <button class="button" @click="sendMessage2()">
+              Send2
+            </button> 
+            
         <button class="button" @click="endCall()" v-show="activeCallRinging">
         <i class="material-icons">{{!activeCall?  "phone_in_talk" : "not interested" }}</i>
         </button> 
@@ -424,11 +414,13 @@ export default {
   width: 300px;
   margin: 40px auto 0;
   padding: 20px 30px;
+  padding-top: 300px;
   background-color: #fff;
-  border-radius: 2px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+  border-radius: 0px;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.33);
   transition: all 0.3s ease;
   font-family: Helvetica, Arial, sans-serif;
+  border: 0px
 }
 
 .modal-header h3 {
@@ -445,6 +437,7 @@ export default {
   padding: 0;
   margin: 0;
   overflow: hidden;
+  border: 0px
 }
 
 .input-number {

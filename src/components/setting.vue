@@ -1,6 +1,14 @@
 <template>
   <div class="content easy-button">
     <ul class="table-view">
+      <li class="table-view-cell media" @click="disconnect">
+        <router-link class="navigate-right" to="/">
+          <span class="media-object pull-left icon icon-person"></span>
+          <div class="media-body">
+            Logout
+          </div>
+        </router-link>
+      </li>      
       <li class="table-view-cell media">
         <router-link class="navigate-right" to="/addcontact">
           <span class="media-object pull-left icon icon-person"></span>
@@ -62,7 +70,10 @@ export default {
     this.$nextTick(function() {});
   },
   methods: {
-    hideAlert: function() {}
+    hideAlert: function() {},
+    disconnect: function() {
+      this.$store.dispatch('disconnect');
+    }
   },
   computed: mapState({}),
 }

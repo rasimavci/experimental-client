@@ -1,5 +1,5 @@
 <template>
-  <nav class="bar bar-tab easy-bottom-bar">
+  <nav class="bar bar-tab easy-bottom-bar" v-if="checkConnected">
     <router-link class="tab-item" to="/message">
       <span class="icon fa fa-weixin" :class="{'easy-fa-color': isHome}"></span>
       <span class="tab-label" :class="{'easy-fa-color': isHome}">chat</span>
@@ -17,6 +17,11 @@
 
 <script>
 export default {
+  computed: {
+    checkConnected () {
+      return this.$store.state.isConnected
+    }
+  },    
   data: () => ({
     isHome: true,
     isList: false,

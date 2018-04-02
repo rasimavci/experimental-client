@@ -2,7 +2,7 @@
   <header class="bar bar-nav bar-easy-vue">
     <a class="icon icon-refresh pull-left" v-if="showRefeshIcon" @click="refresh"></a>
     <a class="icon icon-left-nav pull-left" v-if="showReturnIcon" @click="goBack"></a>
-    <a class="icon fa fa-user-plus pull-right" v-if="showWriteIcon" @click="goOption"></a>
+    <a class="icon icon-gear pull-right" v-if="showWriteIcon" @click="goOption"></a>
     <h1 class="title">Smart Office</h1>
   </header>
 </template>
@@ -34,7 +34,8 @@ export default {
       this.$router.back();
     },
     goOption: function() {
-    this.$router.push('contacttocall')
+    this.$router.push('option')      
+    // this.$router.push('contacttocall')
     }    
   }
 }

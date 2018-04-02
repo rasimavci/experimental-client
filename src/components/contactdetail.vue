@@ -1,14 +1,8 @@
 <template>
   <div class="easy-content">
-
-
-
-
   <div class="center" id="main" style="width: 320px; height: 400px;background-position:center;background-repeat:no-repeat;">
     <img class="media-object pull-center" :src="result.photoUrl">
-
-  <div>
-
+  </div>
 
     <p>
       {{result.firstName}} {{result.lastName}}
@@ -47,24 +41,19 @@
 
 
 <input type="checkbox" id="checkbox" v-model="checked">
-<label for="checkbox">{{ checked }}</label>    
-</div>
-
-
-</div>
-
+<label for="checkbox">Friend</label>    
 
     <div class="modal-container" display="none">
       <div class="keypad">
         <div class="keypad-container" :class="[activeCall? 'hide-keypad': '']">
-        <div class="keypad-menu">                     
+        <div class="keypad-menu">   
         <button class="button" @click="makeCall(false)">
         <i class="material-icons">{{!activeCall?  "local_phone" : "phone_in_talk" }}</i>
         </button>
-        <button class='button' @click="makeCall(true)">
+        <button class='button' style='margin-left: 10px;' @click="makeCall(true)">
         <i class="material-icons">{{!activeVideoCall ? "videocam" : "videocam_off"}}</i>
         </button>
-        <button class="button" @click="goChat()">
+        <button class="button" style='margin-left: 10px;' @click="goChat()">
         <i class="material-icons">{{!activeCall?  "chat" : "phone_in_talk" }}</i>
         </button>        
       </div>   
@@ -136,16 +125,23 @@ export default {
 </script>
 
 <style>
+.divider{
+  margin: 5px;
+    width:5px;
+    height:auto;
+    display:inline-block;
+}
+
 .center {
     margin: auto;
     width: 50%;
-    border: 3px solid green;
+    border: 0px solid green;
     padding: 10px;
 }
 
 .easy-content {
   text-align: center;
-  padding-top: 200px;
+  padding-top: 100px;
 }
 .easy-content p:first-child {
   color: #1abc9c;
@@ -154,6 +150,7 @@ export default {
 .easy-content p:last-child {
   padding-top: 20px;
   color: #bbb;
+  border: 0px
 }
 
 .modal-container {
@@ -162,7 +159,7 @@ export default {
   padding: 20px 30px;
   background-color: #fff;
   border-radius: 2px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+  box-shadow: 0 0px 0px rgba(0, 0, 0, .33);
   transition: all .3s ease;
   font-family: Helvetica, Arial, sans-serif;
 }
@@ -191,12 +188,12 @@ export default {
   width: 100%;
 }
 .keypad-container div button{
-  width: 33.33%;
+  width: 30.33%;
   padding: 0;
   margin: 0;
   display: block;
   float: left;
-  height: 70px;
+  height: 50px;
   border: 1px solid gray;
   background: white;
   color: rgba(0,0,0,.8);
